@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
 using Verse;
+using static RimWorld.Alert_UnusableMeditationFocus;
 
 namespace SnoozeAlerts
 {
@@ -26,6 +27,21 @@ namespace SnoozeAlerts
     static class SnoozedAlerts
     {
         public static Dictionary<Type, int> snoozedAlerts = new Dictionary<Type, int>();
+    }
+
+    [HarmonyPatch(typeof(Alert_PermitAvailable))]
+    [HarmonyPatch("OnClick")]
+    public class Patch_Alert_PermitAvailable_OnClick
+    {
+        static bool Prefix(Alert __instance)
+        {
+            if (Event.current.button == 1)
+            {
+                SnoozedAlerts.snoozedAlerts.Add(__instance.GetType(), Find.TickManager.TicksGame + 7500);
+                return false;
+            }
+            return true;
+        }
     }
 
     [HarmonyPatch(typeof(Alert))]
