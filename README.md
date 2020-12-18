@@ -4,6 +4,8 @@ This is a mod for the game RimWorld by Ludeon Studios.
 
 It allows you to right-click on Alerts to snooze them for a bit.
 
+We're on Steam: https://steamcommunity.com/sharedfiles/filedetails/?id=2324526093
+
 # Table of Contents
 
 * [Introduction and Explanation](#introduction-and-explanation)
