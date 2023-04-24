@@ -3,7 +3,9 @@
   <name>SnoozeAlerts</name>
   <author>Maarx</author>
   <url>https://github.com/maarxx/SnoozeAlerts/</url>
-  <description>Allows you to right-click on Alerts to snooze them for a bit.</description>
+  <description>
+The mod allows you to right-click on Alerts to snooze them for a bit.
+  </description>
   <packageId>maarx.snoozealerts</packageId>
   <supportedVersions>
     <li>1.2</li>
